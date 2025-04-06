@@ -36,7 +36,6 @@ async function getChefBirthday(id: number): Promise<string> {
   let user: User | undefined
   try {
     user = await fetchJson<User>(`https://dummyjson.com/users/${ricetta?.userId}`)
-    console.log("Oggetto dello chef:", user);
     if (!user) {
       throw new Error(`user con id ${id} non trovato o non valido`)
     }
